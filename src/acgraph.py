@@ -8,13 +8,13 @@ import igraph as ig
 def load_azuci_graph(rel_attnames = None, isWeighted=True, last_eidx = -1):
 
 
-    df_history = pd.read_csv('../data/access_log.csv')
+    df_history = pd.read_csv('data/access_log.csv')
 
     if last_eidx > 0:
         df_history = df_history[df_history.index.isin(range(last_eidx+1))]
 
     #For azuci the entries turn out to be a history due to the time component
-    df_users = pd.read_csv('../data/az_uci_users.csv')
+    df_users = pd.read_csv('data/az_uci_users.csv')
 
     #Delete 'Unnamed: 0' column and set PERSON_ID' at the beginning
     df_users = df_users[['PERSON_ID', 'PERSON_BUSINESS_TITLE', 'PERSON_BUSINESS_TITLE_DETAIL',
@@ -93,7 +93,7 @@ def load_azuci_graph(rel_attnames = None, isWeighted=True, last_eidx = -1):
 
 def load_azkag_graph(rel_attnames=None, isWeighted=True):
 
-    df_emp_access = pd.read_csv('../data/train.csv')
+    df_emp_access = pd.read_csv('data/train.csv')
     attnames_list = list(df_emp_access.columns)[2:]
 
     #---Group by the column header: attvalues, residx, resolution---
