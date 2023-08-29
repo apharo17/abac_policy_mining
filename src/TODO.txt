@@ -1,0 +1,30 @@
+
+Ahora cargo los grafos de los datasets de Amazon desde acgraph.py
+29 05 22
+Hice los siguientes cambios en acgraph para UCI:
+-Quité la especificación del rango de recursos. Lo del rango ahora será para cuando trate al dataset como una tabla y no como un grafo.
+Como ya no saco el top de recursos, ya no tengo el problema de tener el recurso RESID_2005 (el que no tiene muestras positivas.)
+
+-Para contruir el grafo utilizo el constructor Bipartite de igraph
+-Las etiquetas ya nos las regreso desde el load. Tengo ahora una función llamada def get_labels(Gur, byweights=False), que puede regresar las etiquetas de usuario y recurso ordenadas por grados o suma de pesos de incidencia de forma descendiente.
+
+Falta Kaggle.
+Agregar un parametro para que también estén los negativos en el grafo (se va a necesitar etiquetas en las aristas).
+
+
+31 05 22
+Ya empecé con Kaggle.
+
+
+01 06 22
+get_largestcc modificado, ahora ya no regresa etiquetas
+
+
+23 07 22
+Ahora, por defecto los acgs son con pesos
+
+
+20 05 23
+El filtro de closed frequent itemsets, ahora está en ut
+
+
