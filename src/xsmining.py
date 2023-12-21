@@ -21,11 +21,11 @@ def _load_system(name):
     usrcount = 1
     rescount = 1
 
-    fname = 'healthcare_10_5.abac'
+    fname = 'data/xu/healthcare_10_5.abac'
     if name == 'PM':
-        fname = 'projectmanagement_10_9.abac'
+        fname = 'data/xu/projectmanagement_10_9.abac'
     elif name == 'UN':
-        fname = 'university_6_9.abac'
+        fname = 'data/xu/university_6_9.abac'
 
     f = open(fname, 'r')
 
@@ -109,11 +109,11 @@ def _load_log(name, usrname_to_usrlabel, resname_to_reslabel):
     usrlabels = set()
     reslabels = set()
 
-    fname = 'healthcare_10_5.log'
+    fname = 'data/xu/healthcare_10_5.log'
     if name == 'PM':
-        fname = 'projectmanagement_10_9.log'
+        fname = 'data/xu/projectmanagement_10_9.log'
     elif name == 'UN':
-        fname = 'university_6_9.log'
+        fname = 'data/xu/university_6_9.log'
 
     f = open(fname, 'r')
 
